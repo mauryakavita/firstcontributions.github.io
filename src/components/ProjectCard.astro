@@ -37,14 +37,16 @@ const { projectLink, logoLink, name, description, tags = [], loadIssues = false 
       <div class="Card-Description">
         <p>{description}</p>
       </div>
-      {loadIssues && (
-        <IssueList projectLink={projectLink} projectName={name} />
-      )}
-    </div>
-    <div class="Card-Link">
-      <span>Go to Project</span>
     </div>
   </a>
+  {loadIssues && (
+    <IssueList projectLink={projectLink} projectName={name} />
+  )}
+  <div class="Card-Link">
+    <a href={projectLink} target="_blank">
+      <span>Go to Project</span>
+    </a>
+  </div>
 </div>
 
 <style>
